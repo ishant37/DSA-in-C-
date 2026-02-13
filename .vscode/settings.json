@@ -1,0 +1,17 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "list": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
+    }
+}
