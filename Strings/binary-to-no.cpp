@@ -29,7 +29,7 @@ int main(){
     int n =11;
     NotoBinary(n);
     reverseNo(n);
-    binaryToNo(n);
+   cout<< binaryToNo(n);
     
     return 0;
 }
