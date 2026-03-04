@@ -19,7 +19,7 @@ int repeatingIndexReturn(vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {1, 3,7, 9, 6, 8, 2, 4};
+    vector<int> arr = {1,1, 3,7, 9, 6, 8, 2, 4};
     int index = repeatingIndexReturn(arr);
 
     if (index == -1) {

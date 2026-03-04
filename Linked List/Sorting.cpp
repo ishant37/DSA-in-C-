@@ -86,10 +86,9 @@ void printList(Node *head) {
 
 int main() {
       
-    // Create a hard-coded singly linked list:
-    // 9 -> 8 -> 5 -> 2
+    
     Node *head = new Node(9);
-    head->next = new Node(8);
+    head->next = new Node(4);
     head->next->next = new Node(5);
     head->next->next->next = new Node(2);
 

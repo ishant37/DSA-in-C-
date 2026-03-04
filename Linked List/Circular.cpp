@@ -67,6 +67,7 @@ int main() {
     cll.InsertAtTail(1);
     cll.InsertAtTail(2);
     cll.InsertAtTail(3);
+    cll.InsertAtHead(4);
     
 
     cll.printCLL();
