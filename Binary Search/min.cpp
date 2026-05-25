@@ -16,7 +16,7 @@ int smaller(vector<int>arr){
     return arr[low];
 }
 int main(){
-    vector<int>arr={2,3,4,1};
+    vector<int>arr={2,3,4,8};
     cout<<smaller(arr)<<endl;
     return 0;
 }

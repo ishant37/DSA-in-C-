@@ -78,9 +78,9 @@ bool isEven(int n)
 
 int main()
 {
-    int n = 12;
+    int n = 8;
     if (isEven(n) == true)
-        cout << "true";
+        cout << n<<" is even";
     else
         cout << "false";
 

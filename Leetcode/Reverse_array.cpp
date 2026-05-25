@@ -9,7 +9,7 @@ void reversearray(vector<int>& arr){
         end--;
     }
 }
-void originalarray(vector<int>& arr){
+void originalarray(vector<int> arr){
     cout<<"The original array is : ";
     for(int val:arr){
         cout<<val<<" ";

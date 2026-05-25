@@ -15,6 +15,6 @@ int countSpecial(string s) {
 }
 
 int main() {
-    string s = "Hello@123#World!";
+    string s = "Hello@123#World";
     cout << countSpecial(s);
 }
