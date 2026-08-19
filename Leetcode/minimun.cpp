@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int findMinElement(vector<int>& arr, int st, int ed) {
+vector<int> findMinElement(vector<int>& arr, int st, int ed) {
     while (st < ed) {
         int mid = st + (ed - st) / 2;
         if (arr[mid] > arr[ed]) {
@@ -15,7 +15,7 @@ int findMinElement(vector<int>& arr, int st, int ed) {
 }
 
 int main() {
-    vector<int> arr = {3, 4, 5, 1, 2};
+    vector<int> arr = {3, 4, 5, 1, 2,8};
     int ans = findMinElement(arr, 0, arr.size() - 1);
     cout << "The minimum element is: " << ans << endl;
     return 0;
