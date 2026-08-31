@@ -62,7 +62,7 @@ int rotatedBinarySearch(int arr[], int size, int target) {
 
 int main() {
     int arr[] = {4, 5, 6, 7, 0, 1, 2};
-    int target = 6;
+    int target = 4;
     int size = sizeof(arr) / sizeof(arr[0]); // Calculate array size
     int result = rotatedBinarySearch(arr, size, target);
     cout << result << endl;  // Output should be -1 since 3 is not in the array

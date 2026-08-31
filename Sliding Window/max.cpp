@@ -27,8 +27,9 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void maxsumsubarray(vector<int>& arr,int k,vector<int>& result){
+vector<int> maxsumsubarray(vector<int>& arr,int k){
     int n=arr.size();
+    vector<int> result;
     for(int i=0;i<n-k;i++){
         int mx=arr[i];
         for(int j=i;j<n;j++){
@@ -52,5 +53,5 @@ int main(){
     int k=3;
     vector<int>result=maxsumsubarray(arr,k);
     printarray(result);
-    return;
+    return 0;
 }

@@ -4,14 +4,15 @@ using namespace std;
 
 string decToBinary(int n) {
     
-    string bit = "";
-   while(n>0){
-    int rem = n % 2;
-    bit.push_back('0' + rem);
-    n /= 2;
-   }
-   reverse(bit.begin(),bit.end());
-   return bit;
+    string bit="";
+    while(n>0){
+        int rem=n%2;
+        bit.push_back('0'+rem);
+        n/=2;
+
+    }
+    reverse(begin(bit),end(bit));
+    return bit;
 }
  
 
