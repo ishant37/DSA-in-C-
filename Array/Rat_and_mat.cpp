@@ -3,7 +3,7 @@ using namespace std;
 class solution
 {
 public:
-    void ratinamaze(vector<vector<int>> &m, int n, vector<string> &ans, int i, int j, string path, vector<vector<int>> &vis)
+    void ratinamaze(vector<vector<int>> &m, int n, vector<string> &ans, int i, int j, string path, vector<vector<bool>> &vis)
     {
         if (i < 0 || j < 0 || i >= n || j >= n || m[i][j] == 0 || vis[i][j] == 1)
         {
@@ -19,13 +19,13 @@ public:
         ratinamaze(m, n, ans, i - 1, j, path + 'U', vis);
         ratinamaze(m, n, ans, i, j + 1, path + 'R', vis);
         ratinamaze(m, n, ans, i, j - 1, path + 'L', vis);
-        vis[i][j] = 0;
+        vis[i][j] = false;
     }
 
     vector<string> findPath(vector<vector<int>> &m, int n)
     {
         vector<string> ans;
-        vector<vector<int>> vis(n, vector<int>(n, 0));
+        vector<vector<bool>> vis(n, vector<int>(n, false));
         if (m[0][0] == 0)
         {
             return ans;

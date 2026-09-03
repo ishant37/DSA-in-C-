@@ -14,7 +14,7 @@ int main(){
         };
         bool isValid = true;
         for(char ch : s){
-            if(mapping.find(ch) != mapping.end()){
+            if(mapping.count(ch)){
                 if(st.empty() || st.top() != mapping[ch]){
                     isValid = false;
                     break;

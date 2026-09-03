@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& mat) {
@@ -30,3 +32,21 @@ public:
         return ans;
     }
 };
+int main(){
+    Solution sol;
+    vector<vector<int>> mat = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    vector<int> result = sol.spiralOrder(mat);
+
+    cout << "Spiral Order: ";
+    for (int num : result) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}

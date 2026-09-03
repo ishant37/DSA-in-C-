@@ -65,6 +65,8 @@ void print5(int n){
 int main(){
     int n;
     cin >> n;
+    print4(n);
+    cout<<" ";
     print5(n);
     return 0;
 }

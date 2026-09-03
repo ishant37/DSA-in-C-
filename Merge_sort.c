@@ -16,30 +16,27 @@ void merge(int arr[], int left, int mid, int right) {
 
     // Merge the temp arrays back into arr[left..right]
     int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
-            arr[k] = L[i];
+    while(i<n1 && j<n2){
+        if(L[i]<=R[j]){
+            arr[k]=L[i];
             i++;
-        } else {
-            arr[k] = R[j];
+        }
+        else{
+            arr[k]=R[j];
             j++;
         }
         k++;
     }
 
-    // Copy remaining elements of L[], if any
-    while (i < n1) {
-        arr[k] = L[i];
-        i++;
-        k++;
+    while(i<n1){
+        arr[k]=L[i];
+        i++,k++;
+    }
+    while(j<n2){
+        arr[k]=R[i];
+        j++,k++;
     }
 
-    // Copy remaining elements of R[], if any
-    while (j < n2) {
-        arr[k] = R[j];
-        j++;
-        k++;
-    }
 }
 
 // Function to implement merge sort

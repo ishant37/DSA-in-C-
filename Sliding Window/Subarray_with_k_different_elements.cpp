@@ -4,19 +4,19 @@ using namespace std;
 int longestSubarrayWithKDistinct(int arr[], int n, int k) {
     int left = 0, right = 0;
     int maxLength = 0;
-    int count[100000] = {0}; // Assuming elements are in the range [0, 99999]
+    int dp[100000] = {0}; // Assuming elements are in the range [0, 99999]
     int distinctCount = 0;
 
     while (right < n) {
-        if (count[arr[right]] == 0) {
+        if (dp[arr[right]] == 0) {
             distinctCount++;
         }
-        count[arr[right]]++;
+        dp[arr[right]]++;
         right++;
 
         while (distinctCount > k) {
-            count[arr[left]]--;
-            if (count[arr[left]] == 0) {
+            dp[arr[left]]--;
+            if (dp[arr[left]] == 0) {
                 distinctCount--;
             }
             left++;
