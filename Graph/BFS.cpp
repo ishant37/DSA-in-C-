@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void bfs(int start,vector<vector<int>>& adj,int n){
-    vector<bool>vis(n+1,false);
+void bfs(int start,vector<vector<int>>& adj,vector<bool>& vis){
     queue<int>q;
     vis[start]=true;
     q.push(start);
@@ -14,12 +13,13 @@ void bfs(int start,vector<vector<int>>& adj,int n){
                 vis[neighbour]=true;
                 q.push(neighbour);
             }
-    }
+        }
     }
 }
 int main(){
     int n,m;
     cin>>n>>m;
+    vector<bool>vis(n+1,false);
     vector<vector<int>>adj(n+1);
     for(int i=0;i<m;i++){
         int u,v;
