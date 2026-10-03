@@ -26,29 +26,27 @@
 //         cout << endl;
 //     }
 // }
+// C++ program for Pascal’s Triangle
+// in O(n^2) time and O(1) extra space
 #include <bits/stdc++.h>
-
 using namespace std;
-void printPascal(int n)
-{
-    
-for (int line = 1; line <= n; line++)
-{
-    int C = 1; // used to represent C(line, i)
-    for (int i = 1; i <= line; i++) 
-    {
-        
-        // The first value in a line is always 1
-        cout<< C<<" "; 
-        C = C * (line - i) / i; 
+// function for Pascal's Triangle
+void printPascal(int n) {
+    for (int row = 1; row <= n; row++) {
+      
+      	// nC0 = 1
+        int c = 1; 
+        for (int i = 1; i <= row; i++) {
+
+            // The first value in a row is always 1
+          	cout << c << " ";
+            c = c * (row - i) / i;
+        }
+        cout << endl;
     }
-    cout<<"\n";
-}
 }
 
-// Driver code
-int main()
-{
+int main() {
     int n = 5;
     printPascal(n);
     return 0;
